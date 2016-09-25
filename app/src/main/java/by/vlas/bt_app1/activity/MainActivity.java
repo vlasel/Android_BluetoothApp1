@@ -5,9 +5,8 @@ import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.ParcelUuid;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -127,8 +126,10 @@ public class MainActivity extends AppCompatActivity {
     public void btnConnectAction(View view) {
         addLine(console, "{btn: 'Connect'}");
         if (isBluetoothReady()) {
-            BluetoothDevice device = bt.getRemoteDevice("00:13:02:01:00:09");
-            BluetoothClass bluetoothClass = device.getBluetoothClass();
+            String address = "00:12:11:13:11:31";
+            BluetoothDevice device = bt.getRemoteDevice(address);
+            String devInfo = "device{address: " + address + ", name: " + device.getName() + "}";
+            addLine(console, devInfo);
         }
     }
 
