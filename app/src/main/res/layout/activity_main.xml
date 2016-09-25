@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="4dp"
+    android:padding="16dp"
+    android:dividerPadding="4dp"
+    android:orientation="vertical"
+    tools:context="by.vlas.bt_app1.activity.MainActivity">
+
+    <Button
+        android:id="@+id/btn_connect"
+        android:text="@string/btn_connect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:id="@+id/btn_on"
+        android:text="@string/btn_on"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:id="@+id/btn_off"
+        android:text="@string/btn_off"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+    <TextView
+        android:id="@+id/label_console"
+        android:text="@string/label_console"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"
+        />
+
+    <ScrollView
+        android:id="@+id/console_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false">
+
+            <TextView
+                android:id="@+id/console"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:padding="1dp" />
+    </ScrollView>
+
+</LinearLayout>
